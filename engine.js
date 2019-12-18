@@ -83,7 +83,7 @@ module.exports = function(options) {
             'What is the jira ticket of this change (e.g. UP-123): (press enter to skip)',
           default: options.defaultScope,
           filter: function(value) {
-            return value.trim().toUpperCase();
+            return value.trim().toLowerCase();
           }
         },
         {
