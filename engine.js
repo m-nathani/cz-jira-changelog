@@ -80,10 +80,10 @@ module.exports = function(options) {
           type: 'input',
           name: 'scope',
           message:
-            'What is the scope of this change (e.g. component or file name): (press enter to skip)',
+            'What is the jira ticket of this change (e.g. UP-123): (press enter to skip)',
           default: options.defaultScope,
           filter: function(value) {
-            return value.trim().toLowerCase();
+            return value.trim().toUpperCase();
           }
         },
         {
@@ -91,7 +91,7 @@ module.exports = function(options) {
           name: 'subject',
           message: function(answers) {
             return (
-              'Write a short, imperative tense description of the change (max ' +
+              'Write a short title/description of the jira ticket of this change (max ' +
               maxSummaryLength(options, answers) +
               ' chars):\n'
             );

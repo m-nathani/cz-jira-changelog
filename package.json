@@ -1,6 +1,6 @@
 {
-  "name": "cz-conventional-changelog",
-  "version": "0.0.0-semantically-released.0",
+  "name": "cz-jira-changelog-umai",
+  "version": "1.0.0",
   "description": "Commitizen adapter following the conventional-changelog format.",
   "main": "index.js",
   "scripts": {
@@ -9,16 +9,16 @@
     "format": "prettier --write *.js",
     "semantic-release": "semantic-release"
   },
-  "homepage": "https://github.com/commitizen/cz-conventional-changelog",
+  "homepage": "https://github.com/m-nathani/cz-jira-changelog",
   "repository": {
     "type": "git",
-    "url": "https://github.com/commitizen/cz-conventional-changelog.git"
+    "url": "https://github.com/m-nathani/cz-jira-changelog.git"
   },
   "engineStrict": true,
   "engines": {
     "node": ">= 10"
   },
-  "author": "Jim Cummins <jimthedev@gmail.com>",
+  "author": "murtaza <mudza100@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",
@@ -45,7 +45,9 @@
   },
   "config": {
     "commitizen": {
-      "path": "./index.js"
+      "path": "./index.js",
+      "maxHeaderWidth": 100,
+      "maxLineWidth": 100
     }
   }
 }
